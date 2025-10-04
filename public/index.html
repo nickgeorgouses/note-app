@@ -224,7 +224,6 @@
                 if (filter){
                     url += `?filter=${filter}`;
                 }
-                console.log('Loading notes with filter:', filter);
 
                 const response = await fetch(url, {
                     headers: getAuthHeaders()
@@ -268,7 +267,7 @@
                     if (note.isShared) {
                         buttonsHTML = `
                         <button class="edit-note-btn" data-note-id="${note._id}" style="background-color: #ad6800; color: white; padding: 5px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px; margin-right: 10px;">
-                            Edit
+                            View
                         </button>
                         <button class="delete-note-btn" data-note-id="${note._id}" style="background-color: #dc3545; color: white; padding: 5px 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">
                             Delete
@@ -277,7 +276,7 @@
                     } else {
                         buttonsHTML = `
                         <button class="edit-note-btn" data-note-id="${note._id}" style="background-color: #ad6800; color: white; padding: 5px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px; margin-right: 10px;">
-                            Edit
+                            View
                         </button>
                         <button class="delete-note-btn" data-note-id="${note._id}" style="background-color: #dc3545; color: white; padding: 5px 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">
                             Delete
